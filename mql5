@@ -1,0 +1,191 @@
+
+//+------------------------------------------------------------------+
+//|                                                     Darwin Swing MT5|
+//|                                   https://www.forexroboteasy.com |
+//|                                                Forex Robot Easy Team|
+//+------------------------------------------------------------------+
+
+// Define constants
+#define INITIAL_TRADE_SIZE 0.01
+#define SUPPORT_RESISTANCE_DISTANCE 0.001
+#define HISTORICAL_DATA_PERIOD 1000
+#define VIRTUAL_POSITIONS_VISIBLE true
+
+// Define variables
+double virtualSupportLevels;
+double virtualResistanceLevels;
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Support and Resistance Levels                     |
+//+------------------------------------------------------------------+
+void CalculateSupportResistanceLevels()
+{
+    // Calculate support and resistance levels based on historical data
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Currency Strength                                 |
+//+------------------------------------------------------------------+
+double CalculateCurrencyStrength()
+{
+    // Calculate currency strength using Darwin Evolution's currency strength system
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor initialization function                              |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Calculate support and resistance levels
+    CalculateSupportResistanceLevels();
+    
+    // Determine the number of support and resistance levels that need to be crossed based on historical data
+    virtualSupportLevels = CalculateCurrencyStrength() * SUPPORT_RESISTANCE_DISTANCE;
+    virtualResistanceLevels = CalculateCurrencyStrength() * SUPPORT_RESISTANCE_DISTANCE;
+    
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor deinitialization function                            |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Perform any necessary cleanup tasks
+    
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor start function                                       |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Monitor price movements and crossing of support and resistance levels
+    double currentPrice = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+    
+    // Check if price crossed the predetermined number of support and resistance levels
+    if (currentPrice >= virtualSupportLevels && currentPrice <= virtualResistanceLevels)
+    {
+        // Place virtual positions on each level, visible on the dashboard but not opened in real
+        if (VIRTUAL_POSITIONS_VISIBLE)
+        {
+            // Draw virtual positions on the chart
+            // ...
+        }
+        
+        // Open a real position when conditions are met
+        double tradeSize = INITIAL_TRADE_SIZE;
+        
+        // Open real position with tradeSize
+        // ...
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Currency Strength                                 |
+//+------------------------------------------------------------------+
+double CalculateCurrencyStrength()
+{
+    // Calculate currency strength using Darwin Evolution's currency strength system
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor optimization function                                |
+//+------------------------------------------------------------------+
+void OnTester()
+{
+    // Optimize code for efficient performance and minimal resource usage
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Support and Resistance Levels                     |
+//+------------------------------------------------------------------+
+void CalculateSupportResistanceLevels()
+{
+    // Calculate support and resistance levels based on historical data
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor start function                                       |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+    // Execute the algorithm for trading
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Currency Strength                                 |
+//+------------------------------------------------------------------+
+double CalculateCurrencyStrength()
+{
+    // Calculate currency strength using Darwin Evolution's currency strength system
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor deinitialization function                            |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Perform any necessary cleanup tasks
+    
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor initialization function                              |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Calculate support and resistance levels
+    CalculateSupportResistanceLevels();
+    
+    // Determine the number of support and resistance levels that need to be crossed based on historical data
+    virtualSupportLevels = CalculateCurrencyStrength() * SUPPORT_RESISTANCE_DISTANCE;
+    virtualResistanceLevels = CalculateCurrencyStrength() * SUPPORT_RESISTANCE_DISTANCE;
+    
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Support and Resistance Levels                     |
+//+------------------------------------------------------------------+
+void CalculateSupportResistanceLevels()
+{
+    // Calculate support and resistance levels based on historical data
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Custom Indicator: Currency Strength                                 |
+//+------------------------------------------------------------------+
+double CalculateCurrencyStrength()
+{
+    // Calculate currency strength using Darwin Evolution's currency strength system
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor optimization function                                |
+//+------------------------------------------------------------------+
+void OnTester()
+{
+    // Optimize code for efficient performance and minimal resource usage
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//| Expert Advisor start function                                       |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+    // Execute the algorithm for trading
+    // ...
+}
